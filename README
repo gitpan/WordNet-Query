@@ -1,0 +1,58 @@
+WordNet::Query perl module
+--------------------------
+
+Allows a simple easy perl interface to the WordNet system.  You must
+already have the WordNet system
+(http://www.cogsci.princeton.edu/~wn/obtain/) to use this module.
+
+Access to WordNet is done through the 'wn' command line program that
+comes with the WordNet package.  'wn' must be executable from the
+command-line (in your $PATH) for this module to function.  Because
+this module does not access the WordNet data more directly, some
+queries can take a while.  This module is not designed for any sort of
+batch processing.  See WordNet::QueryData for jobs that require
+extracting lots of WordNet relations.  This module is also limited in
+that it only deals with nouns.  WordNet::QueryData is much cleaner and
+allows full access to WordNet relations.
+
+PREREQUISITES
+-------------
+
+Perl5
+WordNet 1.6 (http://www.cogsci.princeton.edu/~wn/obtain/)
+
+BUILD & INSTALL
+---------------
+
+To build do:
+
+perl Makefile.PL
+make
+make test
+
+To install do:
+
+make install
+
+DOCUMENTATION
+-------------
+
+The included man page (do 'perldoc WordNet::Query' to extract) should
+give you a good idea of how to use this module and what it is good
+for.  You may also wish to take a look at WordNet::QueryData if you
+find that this module doesn't have everything that you need.  Query
+was my first attempt at a perl module WordNet interface.  QueryData is
+my second.  QueryData is much cleaner and is much better for any sort
+of batch jobs (extracting lots of WordNet relations) as it accesses
+the WordNet data files directly.
+
+WordNet perl modules can be found at
+http://www.ai.mit.edu/~jrennie/WordNet/
+
+COPYRIGHT
+---------
+
+Copyright 1999 Jason Rennie <jrennie@ai.mit.edu>  All rights reserved.
+
+This module is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.

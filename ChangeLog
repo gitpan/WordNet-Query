@@ -1,0 +1,68 @@
+1999-09-15  Jason Rennie  <jrennie@karhu.ai.mit.edu>
+
+	* MANIFEST: add MANIFEST
+	* README: rewrite to correspond to Query
+	
+Thu Jul 22 14:38:57 1999  Jason D. Rennie  <jrennie@kenobi.mitre.org>
+
+	* Query.pm: add lower; lowercase everything; put all verbosity
+ 	output on STDERR
+
+	* Query.pm: add hype_set, level functions; have all parse_*
+ 	functions return -1 if nothing is found; have export functions
+ 	return empty list or undef if nothing is found
+
+	* README: integrate stuff from Dan's readme
+
+1999-07-21  Jason D. Rennie  <jrennie@mitre.org>
+
+	* Query.pm: rename from WordNet.pm; modify initialization code
+	to allow direct access to findtheinfo function; in future,
+	plan to rely soley on findtheinfo (no more command-line 'wn'
+	execution)
+
+1999-07-20  Jason D. Rennie  <jrennie@mitre.org>
+
+	* Makefile: new file
+
+        * WordNet.pm: fixed missing '>' in hash dereference
+	
+1999-07-19  Jason D. Rennie  <jrennie@mitre.org>
+
+	* WordNet.pm: use CVS for versioning ($VERSION line taken from
+ 	CPAN suggestion)
+
+	* WordNet.pm: various fixes in parsing of 'wn' output --
+ 	particularly for special cases ('wn' does not have the requested
+ 	information)
+
+1999-07-16  Jason D. Rennie  <jrennie@mitre.org>
+
+	* WordNet.pm: deal with empty holo or mero wn output (different
+ 	from other queries)
+
+	* WordNet.pm: bug fix---forgot to convert synlist to hash
+
+	* WordNet.pm: various clean up to make "use strict" happy; do the
+ 	right thing for top and bottom of tree
+
+1999-07-15  Jason D. Rennie  <jrennie@mitre.org>
+
+	* WordNet.pm: updated documentation
+
+	* WordNet.pm: allow arbitrary sense querying
+
+1999-07-14  Jason D. Rennie  <jrennie@mitre.org>
+
+	* WordNet.pm: complete rewrite; created separate function for each
+ 	aspect of wordnet (gloss, synset, hype, hypo, mero, holo); still
+ 	need to allow for querying w/o a specific sense
+
+1999-07-13  Jason D. Rennie  <jrennie@mitre.org>
+
+	* WordNet.pm: add example for ambiguous mode
+
+	* WordNet.pm: Follow guidelines in perl FAQ
+
+	* WordNet.pm: quote query words passed to wn
+
